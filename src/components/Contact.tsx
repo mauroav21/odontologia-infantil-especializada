@@ -24,7 +24,7 @@ export default function Contact() {
         </div>
 
         <div className="mt-12 grid gap-8 lg:grid-cols-2">
-          <div className="flex flex-col justify-between gap-8 rounded-3xl bg-white p-8 shadow-sm">
+          <div className="flex min-w-0 flex-col justify-between gap-8 rounded-3xl bg-white p-8 shadow-sm">
             <div className="flex flex-col gap-6">
               <div className="flex items-start gap-4">
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary-100 text-primary-600">
@@ -64,11 +64,11 @@ export default function Contact() {
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary-100 text-primary-600">
                   <Mail className="h-5 w-5" />
                 </span>
-                <div>
+                <div className="min-w-0">
                   <p className="font-heading font-bold text-primary-900">Correo</p>
                   <a
                     href={`mailto:${siteConfig.email}`}
-                    className="font-sans text-primary-900/70 hover:text-accent-500"
+                    className="font-sans text-primary-900/70 hover:text-accent-500 break-words"
                   >
                     {siteConfig.email}
                   </a>
@@ -112,7 +112,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="min-h-[320px] overflow-hidden rounded-3xl shadow-sm">
+          <div className="min-h-[320px] min-w-0 overflow-hidden rounded-3xl shadow-sm">
             <iframe
               title="Ubicación de Odontología Infantil Especializada"
               src={mapSrc}
