@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Odontología Infantil Especializada — Landing Page
 
-## Getting Started
+Landing page para **Odontología Infantil Especializada**, consultorio de la
+Dra. Mónica Fabiola González Hernández (odontopediatra) en Saltillo, Coahuila.
 
-First, run the development server:
+Construido con [Next.js](https://nextjs.org) (App Router) y
+[Tailwind CSS](https://tailwindcss.com), listo para desplegarse en
+[Vercel](https://vercel.com).
+
+## Stack
+
+- Next.js 16 (App Router, React 19)
+- Tailwind CSS v4
+- TypeScript
+- [pnpm](https://pnpm.io) como gestor de paquetes
+- Iconos: [lucide-react](https://lucide.dev)
+
+## Desarrollo local
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000) para ver el sitio.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Configuración del negocio
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Todos los datos de contacto (teléfono, WhatsApp, dirección, correo, redes
+sociales) viven en un solo lugar: [`src/lib/site-config.ts`](src/lib/site-config.ts).
+Edita ese archivo para actualizar la información sin tocar los componentes.
 
-## Learn More
+> **Pendiente:** agregar la URL real de Facebook en `siteConfig.social.facebook`.
 
-To learn more about Next.js, take a look at the following resources:
+## Scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+pnpm dev      # servidor de desarrollo
+pnpm build    # build de producción
+pnpm start    # sirve el build de producción
+pnpm lint     # linter
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Despliegue en Vercel
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Importa este repositorio en [vercel.com/new](https://vercel.com/new).
+2. Vercel detecta Next.js automáticamente (no se requiere configuración
+   adicional; usa `pnpm install` y `pnpm build` por el `pnpm-lock.yaml`).
+3. Despliega — no requiere variables de entorno.
