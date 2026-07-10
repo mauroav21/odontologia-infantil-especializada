@@ -21,9 +21,12 @@ export const siteConfig = {
     line2: "Saltillo, Coahuila",
     mapsQuery: "Sierra Mojada 2411, Saltillo, Coahuila",
   },
+  hours: {
+    days: "Lunes a viernes",
+    ranges: ["10:00 a.m. – 2:00 p.m.", "4:00 p.m. – 8:00 p.m."],
+  },
   social: {
-    // TODO: reemplazar con la URL real de la página de Facebook de la clínica.
-    facebook: "",
+    facebook: "https://www.facebook.com/profile.php?id=100049586966151",
   },
   defaultWhatsappMessage:
     "Hola, me gustaría agendar una cita para mi hijo/a en Odontología Infantil Especializada.",

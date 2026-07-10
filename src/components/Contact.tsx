@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, MessageCircle } from "lucide-react";
+import { MapPin, Phone, Mail, MessageCircle, Clock } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 import Button from "@/components/ui/Button";
 
@@ -72,6 +72,21 @@ export default function Contact() {
                   >
                     {siteConfig.email}
                   </a>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary-100 text-primary-600">
+                  <Clock className="h-5 w-5" />
+                </span>
+                <div>
+                  <p className="font-heading font-bold text-primary-900">Horario</p>
+                  <p className="font-sans text-primary-900/70">{siteConfig.hours.days}</p>
+                  {siteConfig.hours.ranges.map((range) => (
+                    <p key={range} className="font-sans text-primary-900/70">
+                      {range}
+                    </p>
+                  ))}
                 </div>
               </div>
             </div>
